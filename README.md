@@ -19,7 +19,7 @@ This document explains how each feature is implemented and utilized in the movie
   - Movies like `"Bagupali"` (synchronous) and `"Joker"` (asynchronous) are added to a list.
   - Users observe how tasks are executed via a button click.
 
----
+
 
 ### **3. Garbage Collection**
 - **Feature**: Remove unused or old movies from the UI.
@@ -46,7 +46,7 @@ This document explains how each feature is implemented and utilized in the movie
   - Uses `let` in block-scoped operations and `var` for global declarations.
   - Avoids hoisting issues in movie list updates.
 
----
+
 
 ### **6. Promise Chaining**
 - **Feature**: Fetch and display movies step by step.
@@ -64,7 +64,7 @@ This document explains how each feature is implemented and utilized in the movie
   - Adding a movie with invalid properties triggers a proxy validation error.
   - Reflect ensures efficient handling of movie operations.
 
----
+
 
 ### **8. Custom Events**
 - **Feature**: Trigger custom events when movies are added or removed.
@@ -82,7 +82,7 @@ This document explains how each feature is implemented and utilized in the movie
   - A `Movie` prototype has a method to return details.
   - Reduces redundancy when creating multiple movie objects.
 
----
+
 
 ### **10. DOM Manipulation Techniques**
 - **Feature**: Dynamically update the movie list and details.
