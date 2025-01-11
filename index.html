@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieApp - Interactive JS Demo</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">🎬 MovieApp</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero bg-dark text-white text-center py-5">
+        <div class="container">
+            <h1>Welcome to MovieApp</h1>
+            <p class="lead">An interactive way to learn JavaScript concepts while enjoying movies!</p>
+        </div>
+    </header>
+
+    <div id="movieCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                
+                <img src="assests/images/img4.jpg" class="d-block" style="width: 100%; height: 500px;" alt="Inception">
+
+                <div class="carousel-caption">
+                    <h5>Bagubali</h5>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="assests/images/img5.jpg" class="d-block" style="width: 100%; height: 500px;" alt="Inception">
+
+                <div class="carousel-caption">
+                    <h5>Joker</h5>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="assests/images/img6.jpg" class="d-block" style="width: 100%; height: 500px;"alt="The Dark Knight">
+                <div class="carousel-caption">
+                    <h5>Kanguva</h5>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#movieCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#movieCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+
+    <section id="features" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Interactive Features</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <h5 class="card-title">Promise, Async, Await</h5>
+                            <p class="card-text">Simulates fetching movie details asynchronously.</p>
+                            <button class="btn btn-primary w-100" onclick="loadMovies()">Fetch Movies</button>
+                            <div id="movie-list" class="mt-3"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow">
+                        <div class="card-body">
+                        <h5 class="card-title">Event Loop: Add Movies</h5>
+                        <p class="card-text">Click the button to simulate asynchronous movie list updates.</p>
+                        <button class="btn btn-primary w-100" onclick="simulateEventLoop()">Add Movies</button>
+                        <ul id="movie-list1" class="mt-3">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <h5 class="card-title">Garbage Collection</h5>
+                            <p class="card-text">Simulates memory management by clearing unused data.</p>
+                            <button class="btn btn-danger w-100" onclick="simulateGarbageCollection()">Clear Memory</button>
+                            <p id="garbage" class="mt-3"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-4">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <h5 class="card-title">Truthy, Falsy</h5>
+                            <p class="card-text">Checks if a user-input value is truthy or falsy.</p>
+                            <button class="btn btn-warning w-100" onclick="checkMovieDetails()">Test Value</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-4">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <h5 class="card-title">Genre Selection (Using Let)</h5>
+                            <p class="card-text">Click below to see how "let" manages block scope for movie genres.</p>
+                            <button class="btn btn-primary w-100" onclick="testLet()">Test Let</button>
+                            <p id="let-output" class="mt-3 "></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-4">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <h5 class="card-title">User Session (Using Var)</h5>
+                            <p class="card-text">Click below to see how "var" works in function scope for user session.</p>
+                            <button class="btn btn-secondary w-100" onclick="testVar()">Test Var</button>
+                            <p id="var-output" class="mt-3 "></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-4">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <h5 class="card-title">Promise Chaining</h5>
+                            <p class="card-text">Get movie details with promise chaining.</p>
+                            <button class="btn btn-primary w-100" onclick="getMovieDetails()">Fetch Movie Details</button>
+                            <p id="promise-output" class="mt-3"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mt-4">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <h5 class="card-title">Proxy and Reflect</h5>
+                            <p class="card-text">Validate movie rating using Proxy.</p>
+                            <button class="btn btn-secondary w-100" onclick="validateMovieRating()">Validate Rating</button>
+                            <p id="proxy-output" class="mt-3"></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mt-4">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <h5 class="card-title">Custom Events</h5>
+                            <p class="card-text">Trigger a custom event for a favorite movie.</p>
+                            <button class="btn btn-success w-100" onclick="triggerFavoriteMovieEvent()">Mark Favorite</button>
+                            <p id="custom-event-output" class="mt-3"></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mt-4">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <h5 class="card-title">Prototypes</h5>
+                            <p class="card-text">Use prototype to add a method for movies.</p>
+                            <button class="btn btn-warning w-100" onclick="usePrototype()">Show Prototypes</button>
+                            <p id="prototype-output" class="mt-3 "></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mt-4">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <h5 class="card-title">Movie List</h5>
+                            <p class="card-text">Click to add a new movie.</p>
+                            <ul id="movie-list2">
+                                <li>Avatar</li>
+                                <li>Avengers</li>
+                            </ul>
+                            <button class="btn btn-dark w-100" onclick="addMovie()">Add Movie</button>
+                            <p id="dom-output" class="mt-3 "></p>
+                        </div>
+                    </div>
+                </div>
+                
+                      
+                
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2025 MovieApp | Learn JavaScript the fun way!</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/asyncAwait.js"></script>
+    <script src="js/eventloop.js"></script>
+    <script src="js/garbage-collection.js"></script>
+    <script src="js/truthyfalsy.js"></script>
+    <script src="js/let-vs-var.js"></script>
+    <script src="js/Promise-Chaining.js"></script>
+    <script src="js/Proxy.js"></script>
+    <script src="js/Custom-Events.js"></script>
+    <script src="js/Prototypes.js"></script>
+    <script src="js/DOM.js" defer></script>
+   
+
+</body>
+</html>
