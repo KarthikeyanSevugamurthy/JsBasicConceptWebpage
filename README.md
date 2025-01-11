@@ -2,7 +2,7 @@
 
 This document explains how each feature is implemented and utilized in the movie application. The app is designed to demonstrate JavaScript concepts with practical, real-world movie application examples.
 
----
+
 
 ### **1. Promise, Async, Await**
 - **Feature**: Fetch movie details from a mock API or static dataset.
@@ -11,7 +11,6 @@ This document explains how each feature is implemented and utilized in the movie
   - Users click "Fetch Movies," and a promise resolves to fetch movie data.
   - `async` and `await` handle API-like responses for seamless UX.
 
----
 
 ### **2. Event Loop**
 - **Feature**: Simulate adding movies to a list using synchronous and asynchronous tasks.
@@ -29,7 +28,7 @@ This document explains how each feature is implemented and utilized in the movie
   - Users click a "Remove Movies" button to simulate garbage collection.
   - Detached DOM elements are removed to free memory.
 
----
+
 
 ### **4. Truthy/Falsey**
 - **Feature**: Check the truthy/falsy nature of user inputs.
@@ -38,7 +37,7 @@ This document explains how each feature is implemented and utilized in the movie
   - Users input a movie name; if valid (truthy), the movie details are displayed.
   - Handles cases like empty input (`Falsy`).
 
----
+
 
 ### **5. Let vs Var**
 - **Feature**: Compare `let` and `var` in a real-time context.
@@ -56,7 +55,7 @@ This document explains how each feature is implemented and utilized in the movie
   - Fetch movies > Fetch genres > Fetch reviews sequentially.
   - Users see how multiple asynchronous tasks are managed.
 
----
+
 
 ### **7. Proxy and Reflect**
 - **Feature**: Manage movie data using Proxy and Reflect for data validation.
@@ -74,7 +73,7 @@ This document explains how each feature is implemented and utilized in the movie
   - A custom "movieAdded" event updates the UI and notifies the user.
   - Helps in decoupling the movie logic and UI updates.
 
----
+
 
 ### **9. Prototypes**
 - **Feature**: Define common movie-related functions using prototypes.
@@ -92,7 +91,7 @@ This document explains how each feature is implemented and utilized in the movie
   - Users click a button to add movies to the list or update details.
   - Movies are added dynamically, enhancing the user interface.
 
----
+
 
 ### **How to Run the Application**
 1. Open the **index.html** file in a browser.
@@ -104,7 +103,7 @@ This document explains how each feature is implemented and utilized in the movie
 - **Frontend**: HTML, CSS (Bootstrap), JavaScript.
 - **No Backend**: Static data used for demonstration purposes.
 
----
+
 
 ### **Future Improvements**
 1. Replace static data with API integration for real-time updates.
